@@ -1,0 +1,16 @@
+{
+  "name": "GoogleDO",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Productivity enhancement tool.",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "background": {
+    "persistent": false,
+    "scripts": ["main.js"]
+  },
+  "permissions": ["https://ajax.googleapis.com/","tabs"],
+  "browser_action": {
+    "default_title": "GoogleDO",
+    "default_popup": "index.html"
+  }
+}

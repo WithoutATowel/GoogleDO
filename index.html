@@ -1,0 +1,211 @@
+<html style="width: 270px; height: 600px; margin: 0px; padding: 0px;">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body style="width: 270px; height: 600px; margin: 0px; padding: 0px;">
+<header>
+   <ul style="float: left">
+      <li id="menu-date" class="icon-date selected" title="Show by Date"><div class="icon"></div></li>
+      <li id="menu-folders" class="icon-folders" title="Show by Folder"><div class="icon"></div></li>
+      <!--<li id="menu-priority" class="icon-priority" title="Show by Priority"><div class="icon"></div></li>-->
+  </ul>
+  <ul style="float: right">
+      <li id="menu-done" class="icon-settings-clear" title="Clear Completed Tasks"><div class="icon"></div></li>
+       <li id="menu-user" class="icon-settings" title="User Options"><div class="icon"></div></li>
+  </ul>
+</header>
+<div class="task-box" style="display: none;">
+    <div class="task-box-input">
+        <a href="#"><img src="/images/plus_icon.png"></a>
+        <form class="add-item"><div class="autocomplete">
+          <div>
+            <div class="autocomplete-grayed-container" style="display: none;">
+              <div></div>
+              <div class="autocomplete-artificial-caret"></div>
+            </div>
+            <div class="autocomplete-loading-element"></div>
+            <ul class="autocomplete-list"></ul>
+            <input placeholder="Insert a new task..." maxlength="1000">
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="tasks-wrapper-calendar" style="height: 550px;">
+  <div class="tasks">
+    <ul class="category-container">
+      <li class="category clearfix">
+        <div class="name">Today</div>
+        <div class="quickadd-button"></div>
+        <div class="details"></div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;" id="today">
+      </ul>
+    </ul>
+    <ul class="category-container">
+      <li class="category clearfix">
+        <div class="name">Tomorrow</div>
+        <div class="quickadd-button"></div>
+        <div class="details"></div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;" id="tomorrow">
+      </ul>
+    </ul>
+    <ul class="category-container">
+      <li class="category clearfix">
+        <div class="name">Upcoming</div>
+        <div class="quickadd-button"></div>
+        <div class="details"></div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;" id="upcoming">
+      </ul>
+    </ul>
+    <ul class="category-container" >
+      <li class="category clearfix">
+        <div class="name">Someday</div>
+        <div class="quickadd-button"></div>
+        <div class="details"></div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;" id="someday">
+      </ul>
+    </ul>
+  </div>
+</div>
+<div class="tasks-wrapper-label" style="height: 550px; display:none">
+  <div class="tasks">
+    <ul class="category-container">
+      <li class="category clearfix">
+        <div class="name">Training</div>
+        <div class="quickadd-button"></div>
+        <div class="details">(3)</div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;">
+        <li class="task normal">
+          <div class="container">
+            <div class="check-button"></div>
+            <div class="delete-button"></div>
+            <div class="drag-button"></div>
+            <div class="summary no-description">Schedule session</div>
+            <div class="summaryContainer">
+              <textarea class="summary no-description" maxlength="1000" rows="1"></textarea>
+              <div class="summary summaryShadow">Schedule session</div>
+              <div class="summaryShadow2Container">
+                <div class="summary summaryShadow2">Schedule session</div>
+              </div>
+            </div>
+            <div class="description"></div>
+          </div>
+        </li>
+        <li class="task normal">
+          <div class="container">
+            <div class="check-button"></div>
+            <div class="delete-button"></div>
+            <div class="drag-button"></div>
+            <div class="summary no-description">Create deck</div>
+            <div class="summaryContainer">
+              <textarea class="summary no-description" maxlength="1000" rows="1"></textarea>
+              <div class="summary summaryShadow">Create deck</div>
+              <div class="summaryShadow2Container">
+                <div class="summary summaryShadow2">Create deck</div>
+              </div>
+            </div>
+            <div class="description"></div>
+          </div>
+        </li>
+        <li class="task normal">
+          <div class="container">
+            <div class="check-button"></div>
+            <div class="delete-button"></div>
+            <div class="drag-button"></div>
+            <div class="summary no-description">Practice preso</div>
+            <div class="summaryContainer">
+              <textarea class="summary no-description" maxlength="1000" rows="1"></textarea>
+              <div class="summary summaryShadow">Practice preso</div>
+              <div class="summaryShadow2Container">
+                <div class="summary summaryShadow2">Practice preso</div>
+              </div>
+            </div>
+            <div class="description"></div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <ul class="category-container">
+      <li class="category clearfix">
+        <div class="name">Client QBR</div>
+        <div class="quickadd-button"></div>
+        <div class="details">(2)</div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;">
+        <li class="task normal">
+          <div class="container">
+            <div class="check-button"></div>
+            <div class="delete-button"></div>
+            <div class="drag-button"></div>
+            <div class="summary no-description">Analyze feature usage</div>
+            <div class="summaryContainer">
+              <textarea class="summary no-description" maxlength="1000" rows="1"></textarea>
+              <div class="summary summaryShadow">Analyze feature usage</div>
+              <div class="summaryShadow2Container">
+                <div class="summary summaryShadow2">Analyze feature usage</div>
+              </div>
+            </div>
+            <div class="description"></div>
+          </div>
+        </li>
+        <li class="task normal">
+          <div class="container">
+            <div class="check-button"></div>
+            <div class="delete-button"></div>
+            <div class="drag-button"></div>
+            <div class="summary no-description">Create deck</div>
+            <div class="summaryContainer">
+              <textarea class="summary no-description" maxlength="1000" rows="1"></textarea>
+              <div class="summary summaryShadow">Create deck</div>
+              <div class="summaryShadow2Container">
+                <div class="summary summaryShadow2">Create deck</div>
+              </div>
+            </div>
+            <div class="description"></div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+    <ul class="category-container">
+      <li class="category clearfix">
+        <div class="name">Perf</div>
+        <div class="quickadd-button"></div>
+        <div class="details">(1)</div>
+        <div class="quickadd-button quickEditCategory-button"></div>
+      </li>
+      <ul style="display: none;">
+        <li class="task normal">
+          <div class="container">
+            <div class="check-button"></div>
+            <div class="delete-button"></div>
+            <div class="drag-button"></div>
+            <div class="summary no-description">Select peer reviewers</div>
+            <div class="summaryContainer">
+              <textarea class="summary no-description" maxlength="1000" rows="1"></textarea>
+              <div class="summary summaryShadow">Select peer reviewers</div>
+              <div class="summaryShadow2Container">
+                <div class="summary summaryShadow2">Select peer reviewers</div>
+              </div>
+            </div>
+            <div class="description"></div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
